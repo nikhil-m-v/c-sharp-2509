@@ -6,86 +6,117 @@
     <title>Product Page</title>
     <style>
         body {
-            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
         }
         header {
-            
-            
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 32px;
+            color: #1d1d1f;
         }
         .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
         }
         .product-image {
             width: 100%;
             height: auto;
-            margin-bottom: 15px;
-        }
-        .description, .features {
             margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .description, .features, .product-details {
+            margin-bottom: 25px;
         }
         .features ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
         .features ul li {
-            padding: 5px 0;
+            padding: 8px 0;
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #1d1d1f;
+        }
+        p {
             font-size: 16px;
+            line-height: 1.6;
+            color: #4a4a4a;
         }
         .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #060d07;
-            color: #fff;
+           
+            width: 50%;
+            padding: 15px;
+            background-color: #0071e3;
+            color: #ffffff;
             text-align: center;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+            font-size: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-left: 350px;
         }
         .cta-button:hover {
-            background-color: #202421;
+            background-color: #005bb5;
+        }
+        .product-details {
+            text-align: center;
+        }
+        .product-details p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Macbook Air</h1>
+        <h1>MacBook Air</h1>
     </header>
 
     <div class="container">
-
         <section class="description">
-            <img src="https://techcart.com.au/wp-content/uploads/2022/08/67729-Apple-MacBook-Air-2022-MLY33-M2-256GB8GB-Midnight.jpg" alt="Macbook" class="product-image">
-            <p>MacBook Air sails through work and play — and the M3 chip brings even greater capabilities to the world’s most popular laptop. With up to 18 hours of battery life,1 you can take the super-portable MacBook Air anywhere and blaze through whatever you’re into.</p>
+            <img src="https://techcart.com.au/wp-content/uploads/2022/08/67729-Apple-MacBook-Air-2022-MLY33-M2-256GB8GB-Midnight.jpg" alt="MacBook" class="product-image">
+            <p>The MacBook Air with the M2 or M3 chip is designed to provide high performance with exceptional battery life, making it the perfect blend of power and portability. With a stunning 13.6-inch Retina display, lightweight design, and up to 18 hours of battery life, the MacBook Air is perfect for work, creativity, and entertainment on the go.</p>
         </section>
-        
-        
+
+        <section class="product-details">
+            <h2>Product Details</h2>
+            <p><strong>Display:</strong> 13.6-inch Retina display with True Tone</p>
+            <p><strong>Storage:</strong> Up to 2TB SSD</p>
+            <p><strong>Ports:</strong> Two Thunderbolt/USB 4 ports, 3.5mm headphone jack</p>
+            <p><strong>Operating System:</strong> macOS</p>
+        </section>
+
         <section class="features">
             <h2>Features</h2>
             <ul>
-                <li>Apple M2 or M3 chip</li>
-                <li>8GB to 24GB unified memory</li>
-                <li>Up to 18 hours battery life</li>
+                <li>Apple M2 or M3 chip for faster performance</li>
+                <li>Up to 24GB unified memory</li>
+                <li>All-day battery life, up to 18 hours</li>
+                <li>Lightweight and portable design</li>
+                <li>Stunning Retina display with True Tone technology</li>
             </ul>
         </section>
 
-       
         <a href="#" class="cta-button">Buy Now</a>
-
     </div>
 
 </body>

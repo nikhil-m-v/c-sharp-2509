@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+</head>
+<body>
+  <h1>Stopwatch</h1>
+  <h3 id="timer">00:00:00</h3>
+  <br><br>
+  <button id="b1" onclick="start()">Start</button>
+  <button id="b2" onclick="reset()">Reset</button>
+  <br><br>
+
+  <script>
+    let hours = 0, minutes = 0, seconds = 0;
+    let intervalID;
+
+    function updateTimer() {
+      seconds++;
+      if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+      }
+      if (minutes === 60) {
+        minutes = 0;
+        hours++;
+      }
+
+      const formattedHours = hours < 10 ? "0" + hours : hours;
+      const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+      const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+
+      document.getElementById("timer").innerText = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+    }
+
+    function start() {
+      clearInterval(intervalID);
+      intervalID = setInterval(updateTimer, 1000);
+      //document.getElementById("b1").disabled = true;
+    }
+
+    function reset() {
+      clearInterval(intervalID);
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+      document.getElementById("timer").innerText = "00:00:00";
+      //document.getElementById("b1").disabled = false;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Carousel</title>
+</head>
+<body>
+  <h1>Image Carousel</h1>
+  <img id="carouselImage" src="image1.jpg" alt="carousel" width="300px" height="200px">
+  <br><br>
+  <button id="b1" onclick="previous()">Previous</button>
+  <button id="b2" onclick="next()">Next</button>
+  <br><br>
+
+  <script>
+    
+    const images = [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg",
+      "image4.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    
+    function previous() {
+      currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+      document.getElementById("carouselImage").src = images[currentIndex];
+    }
+
+    
+    function next() {
+      currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+      document.getElementById("carouselImage").src = images[currentIndex];
+    }
+  </script>
+</body>
+</html>

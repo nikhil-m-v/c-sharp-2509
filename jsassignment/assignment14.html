@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+</head>
+<body>
+  <h1>Random Quote Generator</h1>
+  <h3 id="randomquote">Random Quote</h3>
+  <br><br>
+  <button id="b1" onclick="generate()">Generate Quote</button>
+  <br><br>
+
+  <script>
+    const quotes = [
+      "Try again. Fail again. Fail better.",
+      "Impossible is for the unwilling.",
+      "Good things happen to those who hustle.",
+      "Take the risk or lose the chance.",
+      "If you’re going through hell, keep going.",
+      "Persistence guarantees that results are inevitable."
+    ];
+
+    function generate() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("randomquote").innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>

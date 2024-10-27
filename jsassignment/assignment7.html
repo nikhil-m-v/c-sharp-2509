@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Background color</h1>
+  <label>Enter Color:</label>
+  <input type="color" id="colorinput">
+  <br><br>
+  <input type="button" value="Submit" onclick="changeBackground()">
+  <br><br>
+
+</body>
+<script>
+function changeBackground() {
+    var color = document.getElementById("colorinput").value;
+    document.body.style.backgroundColor = color;
+
+}
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Quiz Application</title>
+</head>
+<body>
+    <div class="Quiz-Container">
+        <h1>Create a Simple Quiz Application</h1>
+        <form id="Quiz_MCQ">
+            <div class="Quiz"> 
+                <p>1. What is the capital of France?</p>
+                <label><input type="radio" id="q1a" name="q1" value="wrong"> Berlin</label><br>
+                <label><input type="radio" id="q1b" name="q1" value="wrong"> Madrid</label><br>
+                <label><input type="radio" id="q1c" name="q1" value="correct"> Paris</label><br>
+                <label><input type="radio" id="q1d" name="q1" value="wrong"> Rome</label>
+            </div>
+
+            <div class="Quiz"> 
+                <p>2. Which planet is known as the Red Planet?</p>
+                <label><input type="radio" id="q2a" name="q2" value="wrong"> Earth</label><br>
+                <label><input type="radio" id="q2b" name="q2" value="correct"> Mars</label><br>
+                <label><input type="radio" id="q2c" name="q2" value="wrong"> Jupiter</label><br>
+                <label><input type="radio" id="q2d" name="q2" value="wrong"> Saturn</label>
+            </div>
+
+            <div class="Quiz"> 
+                <p>3. What is the largest ocean on Earth?</p>
+                <label><input type="radio" id="q3a" name="q3" value="wrong"> Atlantic Ocean</label><br>
+                <label><input type="radio" id="q3b" name="q3" value="wrong"> Indian Ocean</label><br>
+                <label><input type="radio" id="q3c" name="q3" value="wrong"> Arctic Ocean</label><br>
+                <label><input type="radio" id="q3d" name="q3" value="correct"> Pacific Ocean</label>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <script>
+        const form = document.getElementById("Quiz_MCQ");
+        const resultDiv = document.getElementById("result");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            let score = 0;
+            const totalQuestions = 3;
+
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+            answers.forEach(answer => {
+                if (answer.value === 'correct') {
+                    score++;
+                }
+            });
+
+            resultDiv.textContent = "Final Score: " + score + "/" + totalQuestions;
+            resultDiv.style.color = score === totalQuestions ? "green" : "red";
+            
+            if (score !== totalQuestions) {
+                resultDiv.textContent += " - Try again!";
+            }
+        });
+    </script>
+</body>
+</html>

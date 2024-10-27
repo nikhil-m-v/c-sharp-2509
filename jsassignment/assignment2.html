@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Odd or Even</h1>
+    <input type="number" placeholder="Enter Number" id="num1">
+    <br><br>
+    <input type="submit" onclick="Check()">
+    <br>
+    <br>
+    <p id="result">Result</p>
+</body>
+<script>
+    function Check(){
+        var a = parseInt(document.getElementById("num1").value);
+        if(a%2==0)
+        {
+            document.getElementById("result").innerText = a + " is an even number";
+        }
+        else
+        {
+            document.getElementById("result").innerText = a + " is an odd number";
+        }
+
+    }
+</script>
+</html>

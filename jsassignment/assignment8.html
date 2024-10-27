@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" placeholder="First Number" id="num1">
+    <input type="number" placeholder="Second Number" id="num2">
+    <br><br>
+    <select name="list" id="opt">
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option>
+
+    </select>
+    <input type="submit" onclick="Calc()">
+    <br><br>
+    <p id="result">Result</p>
+</body>
+<script>
+    function Calc(){
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var option = document.getElementById("opt").value;
+        switch(option)
+        {
+            case '+':
+            document.getElementById("result").innerText = "Result: " + (a+b);
+            break;
+
+            case '-':
+            document.getElementById("result").innerText = "Result: " + (a-b);
+            break;
+
+            case '*':
+            document.getElementById("result").innerText = "Result: " + (a*b);
+            break;
+
+            case '/':
+                if(b==0)
+                {
+                    document.getElementById("result").innerText = "Division not possible"
+                }
+                else
+                {
+                    document.getElementById("result").innerText = "Result: " + (a/b);
+                }
+                
+                break;
+
+            default:
+            document.getElementById("result").innerText = "Invalid case";
+            break;
+        }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <input type="number" placeholder="Enter Temperature in C" id="num1">
+    <br><br>
+    <input type="submit" onclick="Convert()">
+    <br>
+    <br>
+    <p id="result">Result</p>
+</body>
+<script>
+    function Convert(){
+        var c = parseInt(document.getElementById("num1").value);
+        var f = (c * 9/5) + 32;
+        document.getElementById("result").innerHTML = "Temperature in Fahrenheit: " + f;
+    }
+</script>
+</html>

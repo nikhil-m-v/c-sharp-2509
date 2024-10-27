@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Largest Number</h1>
+    <input type="number" placeholder="First Number" id="num1">
+    <input type="number" placeholder="Second Number" id="num2">
+    <input type="number" placeholder="Third Number" id="num3">
+    <br><br>
+    <input type="submit" onclick="Largest()">
+    <br><br>
+    <p id="result">Result</p>
+</body>
+<script>
+    function Largest(){
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var c = parseInt(document.getElementById("num3").value);
+        
+        var maximum = Math.max(a,b,c);
+        document.getElementById("result").innerText = maximum + " is the greatest";
+        
+    }
+</script>
+</html>
